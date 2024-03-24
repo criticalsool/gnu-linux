@@ -1,8 +1,10 @@
 #! /bin/bash
-# My Archlinux install script
+# Another Archlinux install script
 # Features :
 #  - btrfs file system
 #  - disk encryption with luks
+#  - unified kernel image
+#  - secure boot
 
 ### Check root
 if [ "$EUID" -ne 0 ]; then
@@ -144,6 +146,10 @@ echo "Not in Secure Boot setup mode. Skipping..."
 fi
 #install the systemd-boot bootloader
 arch-chroot "$rootmnt" bootctl install --esp-path=/efi
+
+#copy mirrolist
+cp /etc/pacman.d/mirrolist "$rootmnt"/etc/pacman.d/mirrolist
+
 #lock the root account
 #arch-chroot "$rootmnt" usermod -L root
 #and we're done
