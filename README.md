@@ -1,5 +1,5 @@
 <!-- <div align="center"> -->
-<img src="[https://github.com/archlinux/archinstall/raw/master/docs/logo.png](https://kernel.org/theme/images/logos/tux.png)" alt="drawing" width="200"/>
+<img src="https://kernel.org/theme/images/logos/tux.png" alt="drawing" width="200"/>
 
 
 # My Linux repo
@@ -7,8 +7,8 @@ Just another personnal linux repo containing preferences and tools.
 
 
 # Contents
-- (Archlinux install script)[https://github.com/criticalsool/linux/blob/main/archinstall.bash]
-- (Linux setup script)[https://github.com/criticalsool/linux/blob/main/setup.bash]
+- [Archlinux install script](https://github.com/criticalsool/linux/blob/main/archinstall.bash)
+- [Linux setup script](https://github.com/criticalsool/linux/blob/main/setup.bash)
 
 
 ## Archlinux install script
@@ -21,7 +21,7 @@ Another Archlinux install script.
 - secure boot
 
 ### Sources
-- (ArchWiki)[https://wiki.archlinux.org/title/Installation_guide]
+- [ArchWiki](https://wiki.archlinux.org/title/Installation_guide)
 
 
 ## Linux setup script
@@ -33,5 +33,5 @@ Another Linux setup script.
 - Debian and Archlinux specific setup
 
 ### Sources
-- (ArchWiki)[https://wiki.archlinux.org/title/Bash]
-- (Bash)[https://www.gnu.org/software/bash/manual/bash.html]
+- [ArchWiki](https://wiki.archlinux.org/title/Bash)
+- [Bash](https://www.gnu.org/software/bash/manual/bash.html)
