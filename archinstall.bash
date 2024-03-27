@@ -11,6 +11,11 @@ if [ "$EUID" -ne 0 ]; then
     echo -e "\e[31mPlease run this script as root\e[0m"
     exit
 fi
+### Check archlinux
+if [[ ! -e /etc/arch-release ]]; then
+    echo -e "\e[31mThis script must be run in Arch Linux!\e[0m"
+    exit
+fi
 
 ### Config options
 fdisk -l
