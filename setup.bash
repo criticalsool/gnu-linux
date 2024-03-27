@@ -1,9 +1,11 @@
 #! /bin/bash
-# Linux preferences setup 
+# Linux preferences setup
 # Features :
 #	- User and root prompt preference
 #	- User and root aliases
 #	- Debian and Archlinux specific setup
+#
+# Usage : bash setup.bash
 
 ### Linux Setup ###
 
@@ -14,7 +16,7 @@ if [ "$EUID" -ne 0 ]; then
 fi
 
 # Username prompt
-read -p "Enter username: " user
+read -p "$(echo -e "\e[34mEnter username: \e[m")" user
 
 # OS Flavour
 if [ -f /etc/os-release ]; then
@@ -104,6 +106,11 @@ alias rmd="rm  --recursive --force --verbose "
 # Remove securely
 alias shredd="shred -n 48 -uv "
 
+# BTRFS
+alias backup-list='sudo echo -e "${BLUE}" && sudo btrfs subv list / && echo -e "$NONE"'
+alias backup="sudo btrfs subvolume snapshot / /.snapshots/root/$(date +%d-%m-%Y) && sudo btrfs subvolume snapshot /home /.snapshots/home/$(date +%d-%m-%Y)"
+alias backup-delete='backup-list && read -p "$(echo -e "${GREEN}\nSaisir la date de la sauvegarde à supprimer (DD-MM-YYYY) : ${NONE}")" choix && sudo btrfs subvolume delete /.snapshots/root/${choix} && sudo btrfs subvolume delete /.snapshots/home/${choix}'
+
 EOL
 )
 echo "$bash_aliases" > "/home/$user/.bash_aliases"
@@ -141,7 +148,7 @@ echo "$bash_aliases" >> "/root/.bash_aliases"
 if [ "$NAME" == "Arch Linux" ]; then
 
     # Add root bashrc stuff for arch : motd
-    pacman -Sy figlet vim --noconfirm
+    pacman -Sy figlet vim --needed --noconfirm
     bashrc=$(cat <<'EOL'
 printf $BOLD
 printf "   ${BLUE}pacman -Syyu    -   ${GREEN}System upgrade"
