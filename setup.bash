@@ -100,6 +100,9 @@ alias grep="grep --color=auto"
 alias l="ls -lrth"
 alias ll="l -a"
 
+# Delete history
+alias history-clear="rm ~/.bash_history; rm ~/.lesshst; history -c"
+
 # Remove a directory and all files
 alias rmd="rm  --recursive --force --verbose "
 
