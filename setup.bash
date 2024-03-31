@@ -99,9 +99,11 @@ alias ls="ls --color=auto"
 alias grep="grep --color=auto"
 alias l="ls -lrth"
 alias ll="l -a"
+# (https://wiki.archlinux.org/title/Su#Login_shell)
+alias su="su -l"
 
 # Delete history
-alias history-clear="rm ~/.bash_history; rm ~/.lesshst; history -c"
+alias history-clear="rm ~/.bash_history; rm ~/.lesshst; rm ~/.viminfo; history -c"
 
 # Remove a directory and all files
 alias rmd="rm  --recursive --force --verbose "
