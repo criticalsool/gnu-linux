@@ -5,8 +5,8 @@ Just another personnal GNU/Linux repo containing preferences and tools.
 
 
 # Contents
-- [Archlinux install script](https://github.com/criticalsool/gnu-linux/main/README.md#archlinux-install-script)
-- [GNU/Linux setup script](https://github.com/criticalsool/gnu-linux/main/README.md#gnulinux-setup-script)
+- [Archlinux install script](https://github.com/criticalsool/gnu-linux/blob/main/README.md#archlinux-install-script)
+- [GNU/Linux setup script](https://github.com/criticalsool/gnu-linux/blob/main/README.md#gnulinux-setup-script)
 
 
 ## Archlinux install script
