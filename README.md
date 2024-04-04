@@ -1,4 +1,4 @@
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/GNU_and_Tux.svg/langfr-192px-GNU_and_Tux.svg.png" alt="drawing" width="50"/>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/GNU_and_Tux.svg/langfr-192px-GNU_and_Tux.svg.png" alt="drawing"/>
 
 # Another GNU/Linux repo
 Just another personnal GNU/Linux repo containing preferences and tools.
