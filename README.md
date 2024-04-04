@@ -1,5 +1,5 @@
 <img src="https://kernel.org/theme/images/logos/tux.png" alt="drawing" width="50"/>
-<img src="https://www.gnu.org/graphics/gnu-head-mini.png" alt="drawing" width="50"/>
+<img src="https://fr.wikipedia.org/wiki/Linux#/media/Fichier:Heckert_GNU_white.svg" alt="drawing" width="50"/>
 
 # Another GNU/Linux repo
 Just another personnal GNU/Linux repo containing preferences and tools.
