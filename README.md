@@ -1,17 +1,17 @@
 <img src="https://kernel.org/theme/images/logos/tux.png" alt="drawing" width="50"/>
+<img src="https://www.gnu.org/graphics/gnu-head-mini.png" alt="drawing" width="50"/>
 
-
-# Another Linux repo
-Just another personnal linux repo containing preferences and tools.
+# Another GNU/Linux repo
+Just another personnal GNU/Linux repo containing preferences and tools.
 
 
 # Contents
-- [Archlinux install script](https://github.com/criticalsool/linux/edit/main/README.md#archlinux-install-script)
-- [Linux setup script](https://github.com/criticalsool/linux/edit/main/README.md#linux-setup-script)
+- [Archlinux install script](https://github.com/criticalsool/gnu-linux/edit/main/README.md#archlinux-install-script)
+- [GNU/Linux setup script](https://github.com/criticalsool/gnu-linux/edit/main/README.md#gnulinux-setup-script)
 
 
 ## Archlinux install script
-Another [Archlinux install script](https://github.com/criticalsool/linux/blob/main/archinstall.bash).
+Another [Archlinux install script](https://github.com/criticalsool/gnu-linux/blob/main/archinstall.bash).
 
 #### Features
 - btrfs file system
@@ -22,8 +22,8 @@ Another [Archlinux install script](https://github.com/criticalsool/linux/blob/ma
 > Sources : [ArchWiki](https://wiki.archlinux.org/title/Installation_guide)
 
 
-## Linux setup script
-Another [Linux setup script](https://github.com/criticalsool/linux/blob/main/setup.bash).
+## GNU/Linux setup script
+Another [GNU/Linux setup script](https://github.com/criticalsool/gnu-linux/blob/main/setup.bash).
 
 #### Features
 - User and root prompt preference
