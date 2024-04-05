@@ -113,7 +113,7 @@ alias shredd="shred -n 48 -uv "
 
 # BTRFS
 alias backup-list='sudo echo -e "${BLUE}" && sudo btrfs subv list / && echo -e "$NONE"'
-alias backup="sudo btrfs subvolume snapshot / /.snapshots/root/$(date +%d-%m-%Y) && sudo btrfs subvolume snapshot /home /.snapshots/home/$(date +%d-%m-%Y)"
+alias backup='sudo btrfs subvolume snapshot / /.snapshots/root/$(date +%d-%m-%Y) && sudo btrfs subvolume snapshot /home /.snapshots/home/$(date +%d-%m-%Y)'
 alias backup-delete='backup-list && read -p "$(echo -e "${GREEN}\nSaisir la date de la sauvegarde à supprimer (DD-MM-YYYY) : ${NONE}")" choix && sudo btrfs subvolume delete /.snapshots/root/${choix} && sudo btrfs subvolume delete /.snapshots/home/${choix}'
 
 EOL
