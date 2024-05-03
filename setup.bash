@@ -150,7 +150,7 @@ echo "$bash_aliases" >> "/root/.bash_aliases"
 ### Arch Specific Setup ###
 
 # If OS is Archlinux
-if [ "$NAME" == "Arch Linux" ]; then
+if [ "$ID" == "arch" ]; then
 
     # Add root bashrc stuff for arch : motd
     pacman -Sy figlet vim --needed --noconfirm
@@ -188,7 +188,7 @@ EOL
 ### Debian Specific Setup ###
 
 # If OS is Debian
-elif [ "$NAME" == "Debian" ]; then
+elif [ "$ID" == "debian" ]; then
 
     # Install figlet
     apt update && apt install -y figlet
