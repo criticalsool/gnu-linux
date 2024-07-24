@@ -1,0 +1,8 @@
+
+
+### Archlinux aliases ###
+
+# BTRFS
+alias backup-list='sudo echo -e "\e[34m" && sudo btrfs subv list / && echo -e "\e[m"'
+alias backup='sudo btrfs subvolume snapshot / /.snapshots/root/$(date +%d-%m-%Y) && sudo btrfs subvolume snapshot /home /.snapshots/home/$(date +%d-%m-%Y)'
+alias backup-delete='backup-list && read -p "$(echo -e "\e[1;32m\nSaisir la date de la sauvegarde à supprimer (DD-MM-YYYY) : \e[m")" choix && sudo btrfs subvolume delete /.snapshots/root/${choix} && sudo btrfs subvolume delete /.snapshots/home/${choix}'

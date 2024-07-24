@@ -22,11 +22,16 @@ Another [Archlinux install script](https://github.com/criticalsool/gnu-linux/blo
 
 
 ## GNU/Linux setup script
-Another [GNU/Linux setup script](https://github.com/criticalsool/gnu-linux/blob/main/setup.bash).
+Another [GNU/Linux preferences setup script](https://github.com/criticalsool/gnu-linux/blob/main/setup.bash).
 
 #### Features
-- User and root prompt preference
-- User and root aliases
+- User and root prompt preferences
+- User, root and os based aliases
 - Debian and Archlinux specific setup
 
 > Sources : [ArchWiki](https://wiki.archlinux.org/title/Bash), [Bash](https://www.gnu.org/software/bash/manual/bash.html)
+
+##### Installation (as root)
+```bash
+bash setup.bash
+```

@@ -1,0 +1,22 @@
+
+
+### Aliases ###
+alias grep="grep --color=auto"
+alias ls="ls --color=auto"
+alias l="ls -lrth"
+alias ll="l -a"
+
+# (https://wiki.archlinux.org/title/Su#Login_shell)
+alias su="su -l"
+
+# Delete history
+alias history-clear="rm ~/.bash_history; rm ~/.python_history; rm ~/.lesshst; rm ~/.viminfo; history -c"
+
+# Remove a directory and all files
+alias rmd="rm  --recursive --force --verbose "
+
+# Remove securely
+alias shredd="shred -n 48 -uv "
+
+# IP alias
+alias myip="wget https://myip.wtf/text -O - --quiet"
