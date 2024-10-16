@@ -32,10 +32,6 @@ fi
 cat prompt/user >> "/home/$user/.bashrc"
 cat prompt/root >> "/root/.bashrc"
 
-# Motd
-cat prompt/motd >> "/home/$user/.bashrc"
-cat prompt/motd >> "/root/.bashrc"
-
 # Custom Aliases
 cat aliases/user >> "/home/$user/.bash_aliases"
 cat aliases/root >> "/root/.bashrc"
