@@ -25,7 +25,6 @@ if [ -f /etc/os-release ]; then
     source /etc/os-release
 fi
 
-
 ### Bash Setup ###
 
 # Custom PS1
@@ -36,12 +35,10 @@ cat prompt/root >> "/root/.bashrc"
 cat aliases/user >> "/home/$user/.bash_aliases"
 cat aliases/root >> "/root/.bashrc"
 
-
 ### OS Specific Setup ###
 
 # Archlinux
 if [ "$ID" == "arch" ]; then
-
     # Aliases
     cat aliases/arch >> "/home/$user/.bash_aliases"
 
@@ -55,19 +52,10 @@ if [ "$ID" == "arch" ]; then
     sed -i 's/^#ParallelDownloads.*$/ParallelDownloads = 5/' /etc/pacman.conf
     sed -i 's/^#MAKEFLAGS=\"-j2\"/MAKEFLAGS=\"-j\$(nproc)\"/' /etc/makepkg.conf
 
-    # Figlet installation
-    pacman -Sy figlet vim --needed --noconfirm
-
-
 ### Debian Specific Setup ###
 
 # Debian
 elif [ "$ID" == "debian" ]; then
-
     # Add user aliases for debian
     cat aliases/debian >> "/home/$user/.bash_aliases"
-
-    # Figlet installation 
-    apt update && apt install -y figlet
-
 fi
