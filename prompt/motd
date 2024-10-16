@@ -1,6 +1,0 @@
-
-
-# Motd
-printf "\e[1m\e[38;5;88m"
-figlet "    $USER"
-printf "\e[m"
