@@ -29,10 +29,12 @@ fi
 
 # Custom PS1
 cat prompt/user >> "/home/$user/.bashrc"
+chown $user: /home/$user/.bashrc
 cat prompt/root >> "/root/.bashrc"
 
 # Custom Aliases
 cat aliases/user >> "/home/$user/.bash_aliases"
+chown $user: /home/$user/.bash_aliases
 cat aliases/root >> "/root/.bashrc"
 
 ### OS Specific Setup ###
