@@ -41,6 +41,8 @@ cat aliases/root >> "/root/.bashrc"
 
 # Archlinux
 if [ "$ID" == "arch" ]; then
+    echo "Detected Arch-based distribution"
+
     # Install bat
     pacman --noconfirm --noprogressbar -S bat
 
@@ -57,10 +59,9 @@ if [ "$ID" == "arch" ]; then
     sed -i 's/^#ParallelDownloads.*$/ParallelDownloads = 5/' /etc/pacman.conf
     sed -i 's/^#MAKEFLAGS=\"-j2\"/MAKEFLAGS=\"-j\$(nproc)\"/' /etc/makepkg.conf
 
-### Debian Specific Setup ###
-
 # Debian
 elif [ "$ID" == "debian" ]; then
+    echo "Detected Debian-based distribution"
     # Install bat
     apt-get -qq -y install bat
     # Add user aliases for debian
