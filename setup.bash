@@ -41,6 +41,9 @@ cat aliases/root >> "/root/.bashrc"
 
 # Archlinux
 if [ "$ID" == "arch" ]; then
+    # Install bat
+    pacman --noconfirm --noprogressbar -S bat
+
     # Aliases
     cat aliases/arch >> "/home/$user/.bash_aliases"
 
@@ -58,6 +61,8 @@ if [ "$ID" == "arch" ]; then
 
 # Debian
 elif [ "$ID" == "debian" ]; then
+    # Install bat
+    apt-get -qq -y install bat
     # Add user aliases for debian
     cat aliases/debian >> "/home/$user/.bash_aliases"
 fi

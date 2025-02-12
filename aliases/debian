@@ -4,3 +4,6 @@
 
 # Update
 alias update="sudo apt update && sudo apt full-upgrade -y && sudo apt autoremove -y"
+
+# Bat
+alias cat="batcat"
