@@ -23,3 +23,6 @@ alias myip="wget https://myip.wtf/text -O - --quiet"
 
 # Ping scan
 alias ping-scan="nmap -sP "
+
+# diff
+alias diff="diff --color"
