@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 # Linux preferences setup
 # Features :
 #	- User and root prompt preferences
@@ -25,26 +25,14 @@ if [ -f /etc/os-release ]; then
     source /etc/os-release
 fi
 
-### Bash Setup ###
-
-# Custom PS1
-cat prompt/user >> "/home/$user/.bashrc"
-chown $user: /home/$user/.bashrc
-cat prompt/root >> "/root/.bashrc"
-
-# Custom Aliases
-cat aliases/user >> "/home/$user/.bash_aliases"
-chown $user: /home/$user/.bash_aliases
-cat aliases/root >> "/root/.bashrc"
-
 ### OS Specific Setup ###
 
 # Archlinux
 if [ "$ID" == "arch" ]; then
     echo "Detected Arch-based distribution"
 
-    # Install bat
-    pacman --noconfirm --noprogressbar -S bat
+    # Install bat & bash_completion
+    pacman --noconfirm --noprogressbar --needed -S bat bash-completion
 
     # Aliases
     cat aliases/arch >> "/home/$user/.bash_aliases"
@@ -67,3 +55,15 @@ elif [ "$ID" == "debian" ]; then
     # Add user aliases for debian
     cat aliases/debian >> "/home/$user/.bash_aliases"
 fi
+
+### Bash Setup ###
+
+# Custom PS1
+cat prompt/user >> "/home/$user/.bashrc"
+chown $user: /home/$user/.bashrc
+cat prompt/root >> "/root/.bashrc"
+
+# Custom Aliases
+cat aliases/user >> "/home/$user/.bash_aliases"
+chown $user: /home/$user/.bash_aliases
+cat aliases/root >> "/root/.bashrc"
