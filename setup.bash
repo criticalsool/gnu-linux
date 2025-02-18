@@ -34,6 +34,9 @@ if [ "$ID" == "arch" ]; then
     # Install bat & bash_completion
     pacman --noconfirm --noprogressbar --needed -S bat bash-completion
 
+    # Sourcing bashrc
+    echo -e "\nif [ -f ~/.bash_aliases ]; then\n    . ~/.bash_aliases\nfi" >> /home/$user/.bashrc
+
     # Aliases
     cat aliases/arch >> "/home/$user/.bash_aliases"
 
