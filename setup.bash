@@ -37,6 +37,9 @@ if [ "$ID" == "arch" ]; then
     # Sourcing bashrc
     echo -e "\nif [ -f ~/.bash_aliases ]; then\n    . ~/.bash_aliases\nfi" >> /home/$user/.bashrc
 
+    # set umask to 077
+    echo -e "\numask 077" >> /home/$user/.bashrc
+
     # Aliases
     cat aliases/arch >> "/home/$user/.bash_aliases"
 
